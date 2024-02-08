@@ -22,6 +22,7 @@ const openai = new OpenAI({
 client.on('messageCreate', async (message) => {
     if (message.author.bot) return;
     if (message.content.startsWith(IGNORE_PREFIX)) return;
+    if (message.mentions.users.size > 0) return;
     if (!CHANNELS.includes(message.channelId) && !message.mentions.users.has(client.user.id)) return;
     
     await message.channel.sendTyping();
@@ -33,7 +34,7 @@ client.on('messageCreate', async (message) => {
 
     conversation.push({
         role: 'system',
-        content: 'Chat GPT is a friendly chatbot.',
+        content: 'The assistant is friendly, sociable, and knows everything, ready to provide you with any information you need.',
     });
 
     let prevMessages = await message.channel.messages.fetch({ limit: 10 });
