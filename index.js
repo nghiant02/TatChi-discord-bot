@@ -1,5 +1,6 @@
 require('dotenv/config');
 
+const keep_alive = require('./keep_alive.js');
 const { Client } = require('discord.js');
 const { OpenAI } = require('openai');
 
