@@ -1,23 +1,24 @@
 # TatChi Discord Bot
 
 ## Overview
-TatChi integrates ChatGPT into Discord, offering AI interactions and additional commands for an enhanced server experience. Built with Node.js and hosted on Render.
+TatChi is a Discord bot that brings the power of ChatGPT to Discord. Using Node.js, it facilitates real-time AI interactions within Discord channels, selectively responding in specified channels.
 
 ## Setup
-1. Clone this repo.
-2. Install dependencies: `npm install`.
-3. Set `.env` with Discord token and OpenAI API key.
-4. Run `node index.js` to start.
+1. Clone the repo.
+2. Run `npm install` to install dependencies.
+3. Create a `.env` file with your `DISCORD_TOKEN`, `OPENAI_KEY`, and `CHANNELS`.
+4. Execute `node index.js` to launch the bot.
 
 ## Features
-- ChatGPT conversations.
-- Custom Discord commands.
+- Real-time ChatGPT integration for AI conversations.
+- Responds only in specified channels to avoid spam.
+- Maintains conversation context by tracking recent messages.
 
 ## Deployment
-Deployed on Render, monitored by UptimeRobot.
+Hosted on Render with UptimeRobot for continuous uptime monitoring.
 
 ## Contributing
-Fork and PR welcome.
+Contributions are encouraged! Feel free to fork the repository, make improvements, and submit a pull request.
 
 ## Contact
-For questions or contributions, reach out via GitHub.
+Reach out on GitHub for support, questions, or to discuss contributions.
